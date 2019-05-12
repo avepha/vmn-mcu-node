@@ -78,7 +78,7 @@ private:
         num++;
       }
       aVal = aVal / num;
-      aVal = aVal * 3300 / 4096;
+      // aVal = aVal * 3300 / 4096;
       readIndex = 0;
 
       // float TempCoefficient = 1.0 + 0.0185 * (WaterSensor::instance()->GetWater() - 25.0);
