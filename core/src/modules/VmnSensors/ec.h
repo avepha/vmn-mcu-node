@@ -94,7 +94,8 @@ private:
       // ec = (125*(aVal/150))-500;
       // ec = ec / 1000;
 
-      ec = 0.6361 * aVal + 299.02;
+      ec = 0.6371 * aVal - 299.02;
+      ec = ec / 1000;
       rawEc = ec;
       // ec = ec * calibrationData.ecCal;
       // if (ec < 0)
