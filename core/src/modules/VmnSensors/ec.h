@@ -97,8 +97,8 @@ private:
       ec = 0.6361 * aVal + 299.02;
       rawEc = ec;
       // ec = ec * calibrationData.ecCal;
-      if (ec < 0)
-        ec = 0;
+      // if (ec < 0)
+      //   ec = 0;
     }
   }
 
