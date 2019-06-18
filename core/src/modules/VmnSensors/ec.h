@@ -42,6 +42,12 @@ public:
     EEPROM_Manager::UpdateCalibration();
   }
 
+  void calResetZero() 
+  {
+    calibrationData.ecCal = 1;
+    EEPROM_Manager::UpdateCalibration();
+  }
+
   void calTwelve()
   {
     if (rawEc <= 0)
@@ -97,7 +103,7 @@ private:
       ec = 0.6371 * aVal - 299.02;
       ec = ec / 1000;
       rawEc = ec;
-      // ec = ec * calibrationData.ecCal;
+      ec = ec * calibrationData.ecCal;
       // if (ec < 0)
       //   ec = 0;
     }

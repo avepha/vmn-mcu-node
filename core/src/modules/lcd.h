@@ -116,9 +116,10 @@ private:
         else if (page.LCD_PAGE == 5)
         {
             lcd.setCursor(0, 1);
-            lcd.print("EC 12->Success!");
+            lcd.print("EC Set zero->Success");
             ECSensor::instance()->calTwelve();
         }
+        
         delay(2000);
         page.LCD_PAGE = 0;
     }
@@ -196,7 +197,7 @@ private:
         else if (currentPage == 5)
         {
             lcd.setCursor(0, 0);
-            lcd.print("EC:" + String(ECSensor::instance()->GetEC()) + " CAL:12");
+            lcd.print("EC set zero");
         }
     }
 };
