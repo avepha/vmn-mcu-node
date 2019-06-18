@@ -117,7 +117,7 @@ private:
         {
             lcd.setCursor(0, 1);
             lcd.print("EC Set zero->Success");
-            ECSensor::instance()->calTwelve();
+            ECSensor::instance()->calResetZero();
         }
         
         delay(2000);
