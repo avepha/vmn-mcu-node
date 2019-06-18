@@ -116,7 +116,7 @@ private:
         else if (page.LCD_PAGE == 5)
         {
             lcd.setCursor(0, 1);
-            lcd.print("EC Set zero->Success");
+            lcd.print("EC Set Zero OK");
             ECSensor::instance()->calResetZero();
         }
         
