@@ -16,6 +16,17 @@ public:
   {
     // We start by connecting to a WiFi network
 
+    if (station > 0)
+    {
+      IPAddress local_IP(192, 168, 4, station + 1);
+      IPAddress gateway(192, 168, 4, 1);
+      IPAddress subnet(255, 255, 255, 0);
+      if (!WiFi.config(local_IP, gateway, subnet))
+      {
+        Serial.println("STA Failed to configure");
+      }
+    }
+
     //LcdHandler::instance()->setPage(0);
     Serial.println();
     Serial.println("Start WiFi on Core: " + String(xPortGetCoreID()));
